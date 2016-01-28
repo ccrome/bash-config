@@ -1,0 +1,11 @@
+(
+ (nil . (
+	 (indent-tabs-mode . nil)
+	 (fill-column      . 75)
+	 ))
+ (c-mode . (
+	    (c-basic-offset  . 8)
+	    (c-file-style    . "linux")
+	    ))
+ )
+

@@ -1,0 +1,7 @@
+# Variables for compiling to linux arm.
+# to use this file put the following into ~/.profile
+#
+#  . "$HOME/.bash-config/profile.linuxarmbuild"
+#
+export ARCH=arm
+export CROSS_COMPILE=arm-linux-gnueabihf-
