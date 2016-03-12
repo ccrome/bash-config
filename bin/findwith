@@ -1,0 +1,17 @@
+#!/usr/bin/env python
+import argparse
+from subprocess import call
+
+parser = argparse.ArgumentParser()
+parser.add_argument("needle", type=str, help="Find this in all files, starting form here.");
+parser.add_argument("-iname", type=str, help="file names to search in.  can use wildcards.");
+args = parser.parse_args()
+
+cmd = list(["find", "."])
+if args.iname:
+    cmd.extend(("-iname", args.iname))
+cmd.extend([
+        "-type", "f",
+        "-exec", "grep", "-q", "-i", args.needle, "{}", ";", "-print",
+        ])
+exit(call(cmd))
