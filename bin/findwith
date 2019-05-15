@@ -14,5 +14,5 @@ cmd.extend([
         "-type", "f",
         "-exec", "grep", "-q", "-i", args.needle, "{}", ";", "-print",
         ])
-print cmd
+print (cmd)
 exit(call(cmd))
